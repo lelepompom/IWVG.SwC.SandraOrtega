@@ -42,6 +42,9 @@ public class Fraction {
     }
 
     public double decimal() {
+        if (this.denominator == 0) {
+            throw new IllegalArgumentException("Can not divide by zero");
+        }
         return (double) numerator / denominator;
     }
 
@@ -50,6 +53,9 @@ public class Fraction {
     }
 
     public int getDenominator() {
+        if (this.denominator == 0) {
+            throw new IllegalArgumentException("Can not divide by zero");
+        }
         return denominator;
     }
 
