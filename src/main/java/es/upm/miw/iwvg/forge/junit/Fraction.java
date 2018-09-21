@@ -60,17 +60,13 @@ public class Fraction {
     }
 
     public boolean isPropia(){
-        if (this.numerator < this.denominator) {
-            return true;
-        }
-        return false;
+
+        return (this.numerator < this.denominator) ? true : false;
     }
 
     public boolean isImpropia(){
-        if (this.numerator > this.denominator) {
-            return true;
-        }
-        return false;
+
+        return (this.numerator > this.denominator) ? true : false;
     }
 
 }
