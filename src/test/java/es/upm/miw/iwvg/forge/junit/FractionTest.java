@@ -35,4 +35,11 @@ class FractionTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, ()-> new Fraction( 2, 0).decimal());
         LogManager.getLogger(this.getClass()).debug(exception.getMessage());
     }
+    @Test
+    void fraccion_mayor_menor(){
+        Fraction fraction = new Fraction(4,2);
+        assertEquals(0, fraction.fraccion_mayor_menor(4,2));
+        assertEquals(-1, fraction.fraccion_mayor_menor(5,2));
+        assertEquals(1, fraction.fraccion_mayor_menor(3,2));
+    }
 }
