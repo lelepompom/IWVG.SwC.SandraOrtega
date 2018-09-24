@@ -50,4 +50,17 @@ public class DecimalCollection {
         return higher;
     }
 
+    public Double lower() {
+       if(collection == null || collection.isEmpty()) {
+           throw new ArithmeticException("Empty collection");
+        }
+        double lowerItem = this.collection.get(0);
+        for (double item : this.collection) {
+            if (item < lowerItem) {
+                lowerItem = item;
+            }
+        }
+        return lowerItem;
+    }
+
 }
