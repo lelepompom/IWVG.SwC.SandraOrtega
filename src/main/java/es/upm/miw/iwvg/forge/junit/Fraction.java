@@ -69,4 +69,9 @@ public class Fraction {
         return (this.numerator > this.denominator) ? true : false;
     }
 
+    public boolean isEquivalent(Fraction fraction) {
+        return (this.getNumerator() * fraction.getDenominator()) ==
+                (this.getDenominator() * fraction.getNumerator());
+    }
+
 }

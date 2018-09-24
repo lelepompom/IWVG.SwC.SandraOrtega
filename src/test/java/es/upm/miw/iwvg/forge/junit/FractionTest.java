@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FractionTest {
     private Fraction fraction;
@@ -47,5 +48,11 @@ class FractionTest {
     @Test
     void testIsImPropia(){
         assertEquals(false, propiaFraction.isImpropia());
+    }
+
+    @Test
+    void testIsEquivalent() {
+        Fraction equivalentFraction = new Fraction(8,4);
+        assertTrue(this.fraction.isEquivalent(equivalentFraction));
     }
 }
