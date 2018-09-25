@@ -59,7 +59,7 @@ public class Fraction {
         return denominator;
     }
 
-    public int fraccion_mayor_menor(double numerador_fraccion_comp, double denominador_fraccion_comp){
+    public int fractionMayorMenor(double numerador_fraccion_comp, double denominador_fraccion_comp){
         double valor_a_comparar = numerador_fraccion_comp / denominador_fraccion_comp;
 
         if ( this.decimal() > valor_a_comparar){
