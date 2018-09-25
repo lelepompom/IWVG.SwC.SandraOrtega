@@ -57,10 +57,10 @@ class FractionTest {
         assertTrue(this.fraction.isEquivalent(equivalentFraction));
     }
     @Test
-    void fraccion_mayor_menor(){
+    void testFractionMayorMenor(){
         Fraction fraction = new Fraction(4,2);
-        assertEquals(0, fraction.fraccion_mayor_menor(4,2));
-        assertEquals(-1, fraction.fraccion_mayor_menor(5,2));
-        assertEquals(1, fraction.fraccion_mayor_menor(3,2));
+        assertEquals(0, fraction.fractionMayorMenor(4,2));
+        assertEquals(-1, fraction.fractionMayorMenor(5,2));
+        assertEquals(1, fraction.fractionMayorMenor(3,2));
     }
 }

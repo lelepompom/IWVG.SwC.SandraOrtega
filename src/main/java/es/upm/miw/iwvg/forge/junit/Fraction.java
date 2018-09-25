@@ -60,6 +60,7 @@ public class Fraction {
     }
 
 
+
     public boolean isPropia(){
 
         return this.numerator < this.denominator;
@@ -75,7 +76,9 @@ public class Fraction {
                 (this.getDenominator() * fraction.getNumerator());
         return result;
     }
-    public int fraccion_mayor_menor(double numerador_fraccion_comp, double denominador_fraccion_comp){
+
+    public int fractionMayorMenor(double numerador_fraccion_comp, double denominador_fraccion_comp){
+
         double valor_a_comparar = numerador_fraccion_comp / denominador_fraccion_comp;
         int mayor = 1;
         int igual = 0;
