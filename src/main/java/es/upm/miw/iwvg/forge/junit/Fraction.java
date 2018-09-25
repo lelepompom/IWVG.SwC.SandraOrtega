@@ -59,6 +59,7 @@ public class Fraction {
         return denominator;
     }
 
+
     public boolean isPropia(){
 
         return this.numerator < this.denominator;
@@ -70,8 +71,23 @@ public class Fraction {
     }
 
     public boolean isEquivalent(Fraction fraction) {
-        return (this.getNumerator() * fraction.getDenominator()) ==
+        boolean result = (this.getNumerator() * fraction.getDenominator()) ==
                 (this.getDenominator() * fraction.getNumerator());
+        return result;
+    }
+    public int fraccion_mayor_menor(double numerador_fraccion_comp, double denominador_fraccion_comp){
+        double valor_a_comparar = numerador_fraccion_comp / denominador_fraccion_comp;
+        int mayor = 1;
+        int igual = 0;
+        int menor = -1;
+        if ( this.decimal() > valor_a_comparar){
+            return mayor;
+        } else {
+            if ( this.decimal() == valor_a_comparar){
+                return igual;
+            }
+            else {return menor; }
+        }
     }
 
 }
