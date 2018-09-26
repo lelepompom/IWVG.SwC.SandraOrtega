@@ -19,7 +19,7 @@ public class DecimalCollection {
         return this.collection.size();
     }
 
-    public final String EMPTY_COLLECTION_EXCEPTION = "Empty collection";
+    public final String EMPTY_COLLECTION_EXCEPTION = "Empty collection" ;
 
     public double sum() {
         assert collection != null;
