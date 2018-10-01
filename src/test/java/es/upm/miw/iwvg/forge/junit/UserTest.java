@@ -38,4 +38,10 @@ public class UserTest {
         assertEquals("Sancho", this.user.getFamilyName());
     }
 
+    @Test
+    void testNameToUpperCase(){
+        this.user = new User(1, "federico", "perez");
+        assertEquals("FEDERICO", this.user.nameToUpperCase());
+    }
+
 }

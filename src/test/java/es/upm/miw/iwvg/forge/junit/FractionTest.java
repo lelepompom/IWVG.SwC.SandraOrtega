@@ -6,13 +6,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FractionTest {
     private Fraction fraction;
+    private Fraction propiaFraction;
 
     @BeforeEach
     void before() {
         this.fraction = new Fraction(4, 2);
+        this.propiaFraction = new Fraction(2, 4);
     }
 
     @Test
@@ -32,7 +35,32 @@ class FractionTest {
 
     @Test
     void divisionByZero(){
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, ()-> new Fraction( 2, 0).decimal());
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                ()-> new Fraction( 2, 0).decimal());
         LogManager.getLogger(this.getClass()).debug(exception.getMessage());
+    }
+
+
+    @Test
+    void testIsPropia(){
+        assertEquals(true, propiaFraction.isPropia());
+    }
+
+    @Test
+    void testIsImPropia(){
+        assertEquals(false, propiaFraction.isImpropia());
+    }
+
+    @Test
+    void testIsEquivalent() {
+        Fraction equivalentFraction = new Fraction(8, 4);
+        assertTrue(this.fraction.isEquivalent(equivalentFraction));
+    }
+    @Test
+    void testFractionMayorMenor(){
+        Fraction fraction = new Fraction(4,2);
+        assertEquals(0, fraction.fractionMayorMenor(4,2));
+        assertEquals(-1, fraction.fractionMayorMenor(5,2));
+        assertEquals(1, fraction.fractionMayorMenor(3,2));
     }
 }
